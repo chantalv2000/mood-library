@@ -57,4 +57,7 @@ def new_mood():
         print (mood, genre, recommendation)
         
         return render_template('results.html', mood = mood, recommendation = recommendation, genre = genre, nickname = nickname)
+@app.route("/test")
+def test():
+    return render_template("test.html")
     
