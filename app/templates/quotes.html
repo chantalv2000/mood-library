@@ -8,7 +8,51 @@
 
 
 <head>
+<body class="is-preload">
+	<style>
+		#nav {
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			-moz-align-items: center;
+			-webkit-align-items: center;
+			-ms-align-items: center;
+			align-items: center;
+			-moz-justify-content: space-between;
+			-webkit-justify-content: space-between;
+			-ms-justify-content: space-between;
+			justify-content: space-between;
+			perspective: 1000px;
+			position: relative;
+			padding: 1.5em;
+			z-index: 2;
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #333;
+		}
 
+		.liss {
+			float: left;
+		}
+
+		.liss {
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+	</style>
+	<ul id='nav'>
+		<li class='liss'><a class='linn' href="/">Home</a></li>
+		<li class='liss'><a class='linn' href="/">Quotes</a></li>
+		<li class='liss'><a class='linn' href="/">Login</a></li>
+		<li class='liss'><a class='linn' href="/">Sign Up</a></li>
+
+	</ul>
 	<!-- Compiled and minified CSS -->
 
 	<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">-->
@@ -65,8 +109,8 @@
 		}
 	</style>
 	<ul id='nav'>
-		<li class='liss'><a class='linn' href="/test">Home</a></li>
-		<li class='liss'><a class='linn' href="/quotes">Quotes</a></li>
+		<li class='liss'><a class='linn' href="/">Home</a></li>
+		<li class='liss'><a class='linn' href="/">Quotes</a></li>
 		<li class='liss'><a class='linn' href="/">Login</a></li>
 		<li class='liss'><a class='linn' href="/">Sign Up</a></li>
 
@@ -87,7 +131,7 @@
 					<li><img src="static/images/logo.jpg" width="50" height="50"></li>
 				</ul>
 			</header>
-			<form method="post" action="/mood">
+			<form method="post" action="/quotes">
 			
 				<label for="nickname">Name: </label>
 				<input type='text' name='nickname'>
@@ -102,17 +146,6 @@
 				<!--<input type="radio" name="mood" value="love sick"> Love Sick<br>-->
 				<!--<input type="radio" name="mood" value="calm"> Calm<br>-->
   				<!--  <input type="radio" name="mood" value="flirty"> Flirty<br>-->
-				<p></p>
-
-				<p>Please select your genre:</p>
-				<input type="radio" name="genre" value="pop"> Pop<br>
-				<input type="radio" name="genre" value="rnb"> RnB<br>
-				<input type="radio" name="genre" value="rock"> Rock<br>
-				<input type="radio" name="genre" value="rap"> Rap<br>
-				<input type="radio" name="genre" value="country"> Country<br>
-				<!--<input type="radio" name="genre" value="classical"> classical<br>-->
-  				<!--<input type="radio" name="genre" value="country"> Country<br>-->
-  
 				<p></p>
 
 				<input type="submit" value="Submit">

@@ -6,24 +6,17 @@
 -->
 <html>
 
-
 <head>
-
-	<!-- Compiled and minified CSS -->
-
-	<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">-->
-	<!-- Compiled and minified JavaScript -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-
-
+	<link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon"/>
 	<title>SoundShelter</title>
+	
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="static/assets/css/main.css" />
 	<noscript><link rel="stylesheet" href="static/assets/css/noscript.css" /></noscript>
-
-
+	
+	<link rel="stylesheet" href="static/assets/css/thelaststraw.css" />
+	
 </head>
 
 <body class="is-preload">
@@ -65,64 +58,64 @@
 		}
 	</style>
 	<ul id='nav'>
-		<li class='liss'><a class='linn' href="/test">Home</a></li>
-		<li class='liss'><a class='linn' href="/quotes">Quotes</a></li>
+		<li class='liss'><a class='linn' href="/">Home</a></li>
+		<li class='liss'><a class='linn' href="/">Quotes</a></li>
 		<li class='liss'><a class='linn' href="/">Login</a></li>
 		<li class='liss'><a class='linn' href="/">Sign Up</a></li>
 
 	</ul>
+
 	<!-- Wrapper -->
-	<div id="wrapper">
+	<div id="wrapper" >
 
 		<!-- Main -->
 		<section id="main">
-
 			<header>
-
-				<h1><b>SoundShelter</b></h1>
-
-				<hr />
+	<h1><strong>SoundShelter</strong></h1>
+									
+			<hr />
 				<p>Your one and only music safe haven!</p>
 				<ul class="icons">
 					<li><img src="static/images/logo.jpg" width="50" height="50"></li>
 				</ul>
 			</header>
-			<form method="post" action="/mood">
-			
-				<label for="nickname">Name: </label>
-				<input type='text' name='nickname'>
 
 				<p></p>
-				<p>Please select your mood:</p>
-				<input type="radio" name="mood" value="happy"> Happy<br>
-				<input type="radio" name="mood" value="sad"> Sad<br>
-				<input type="radio" name="mood" value="mad"> Mad<br>
-				<!--  <input type="radio" name="mood" value="stressed"> Stressed<br>-->
- 				<!--  <input type="radio" name="mood" value="throwback"> Throwback<br>-->
-				<!--<input type="radio" name="mood" value="love sick"> Love Sick<br>-->
-				<!--<input type="radio" name="mood" value="calm"> Calm<br>-->
-  				<!--  <input type="radio" name="mood" value="flirty"> Flirty<br>-->
-				<p></p>
-
-				<p>Please select your genre:</p>
-				<input type="radio" name="genre" value="pop"> Pop<br>
-				<input type="radio" name="genre" value="rnb"> RnB<br>
-				<input type="radio" name="genre" value="rock"> Rock<br>
-				<input type="radio" name="genre" value="rap"> Rap<br>
-				<input type="radio" name="genre" value="country"> Country<br>
-				<!--<input type="radio" name="genre" value="classical"> classical<br>-->
-  				<!--<input type="radio" name="genre" value="country"> Country<br>-->
-  
-				<p></p>
-
-				<input type="submit" value="Submit">
-
-			</form>
-
+				<h1><center>Hello {{nickname}}!</center></h1>
+        <h2>We recommend the song: </h2>
+        <iframe src="{{recommendation}}"  width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 			<hr />
+			<h2>Feedback:</h2>
+			<form method="post" action="#">
+				<div class="fields">
+					<div class="field">
+						<input type="text" name="name" id="name" placeholder="Name" />
+					</div>
+					<div class="field">
+						<input type="email" name="email" id="email" placeholder="Email" />
+					</div>
+					<div class="field">
+						<!--<select name="department" id="department">-->
+						<!--				<option value="">Department</option>-->
+						<!--				<option value="sales">Sales</option>-->
+						<!--				<option value="tech">Tech Support</option>-->
+						<!--				<option value="null">/dev/null</option>-->
+						<!--			</select>-->
+					</div>
+					<div class="field">
+						<textarea name="message" id="message" placeholder="Message" rows="4"></textarea>
+					</div>
+					<div class="field">
+					<!--	<input type="checkbox" id="human" name="human" /><label for="human">I'm a human</label>-->
+
+				<ul class="actions special">
+					<li><a href="#" class="button">Send to HR</a></li>
+				</ul>
+			</form>
+			<hr /> 
 			<footer>
 				<ul class="icons">
-					<li><a href="https://www.linkedin.com/in/grace-cen-8b2493186/" class="icon brands fa-linkedin">Linkedin</a></li>
+					<li><a href="https://www.linkedin.com/in/grace-cen-8b2493186/" class="icon brands fa-linkedin">LinkedIn</a></li>
 					<li><a href="https://www.linkedin.com/in/chantal-villacres-4a2ba1180/" class="icon brands fa-linkedin">LinkedIn</a></li>
 					<li><a href="#" class="icon brands fa-linkedin">LinkedIn</a></li>
 				</ul>
@@ -133,7 +126,7 @@
 		<footer id="footer">
 			<ul class="copyright">
 				<li>&copy; SoundShelter</li>
-				<li>Design: <a href="http://html5up.net">Grace, Chantal, Umar</a></li>
+				<li>Design: <a href="">Grace, Chantal, Umar</a></li>
 			</ul>
 		</footer>
 
@@ -150,4 +143,3 @@
 </body>
 
 </html>
-
