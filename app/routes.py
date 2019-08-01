@@ -6,10 +6,10 @@ from app.models import mood, formopener
 from app.models import quotes, formopener
 
 # name of database
-app.config['MONGO_DBNAME'] = 'mood-library' 
+app.config['MONGO_DBNAME'] = 'database' 
 
 # URI of database
-app.config['MONGO_URI'] = 'mongodb+srv://admin:vC9xrh0zCE4JtU6q@cluster0-svmc2.mongodb.net/mood-library?retryWrites=true&w=majority' 
+app.config['MONGO_URI'] = 'mongodb+srv://admin:v04NIkH7GUrqmjy9@cluster0-kwjfj.mongodb.net/database?retryWrites=true&w=majority'
  
 
 mongo = PyMongo(app)
@@ -18,30 +18,30 @@ mongo = PyMongo(app)
 # INDEX
 
 @app.route('/')
-@app.route('/index')
-
+@app.route('/index',methods=["GET","POST"])
 def template():
-    collection= mongo.db.mood
+    users= mongo.db.users
     #Find everything in the collection and store as a dictionary in events
-    mood=collection.find({})
-    
-    return render_template('test.html',mood=mood)
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        users.insert({'username': username,'password': password,'playlist': []})
+    return render_template('test.html',users=users)
 
 # ADD SONGS
 
-@app.route('/add')
+@app.route('/signup')
+def signup():
+    user = mongo.db.users
+    users = user.find({})
+    print(users)
+    return render_template('signup.html')
 
-def add():
-    # define a variable for the collection you want to connect to
-    user= mongo.db.users
-    # insert new data
-    user.insert({'name':'Grace'})
-    # return a message to the user
-    
-    userdata = dict(request.form)
-    print (userdata)
-    name = userdata['nickname']
-    return render_template('template.html', name = name)
+@app.route('/login')
+def login():
+    user = mongo.db.users
+    users = user.find({})
+    return render_template('login.html')
 
 @app.route("/mood",methods=["GET", "POST"])
 def new_quote():
@@ -77,9 +77,11 @@ def new_quotes():
         print (mood, quote)
         
         return render_template('quotes1.html', mood = mood, quote=quote, nickname = nickname)       
-@app.route("/test")
-def test():
-    return render_template("test.html")
+@app.route("/playlist", methods=['GET'])
+def playlist():
+    pl= mongo.db.playlist
+    pl = pl.find({})
+    return render_template("playlist.html",pl = pl)
 @app.route("/test1")
 def test1():
     return render_template("test1.html")

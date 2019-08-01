@@ -7,16 +7,16 @@
 <html>
 
 <head>
-	<link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon"/>
+	<link rel="shortcut icon" href="static/images/logo.jpg" type="image/x-icon" />
 	<title>SoundShelter</title>
-	
+
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="static/assets/css/main.css" />
 	<noscript><link rel="stylesheet" href="static/assets/css/noscript.css" /></noscript>
-	
+
 	<link rel="stylesheet" href="static/assets/css/thelaststraw.css" />
-	
+
 </head>
 
 <body class="is-preload">
@@ -58,32 +58,37 @@
 		}
 	</style>
 	<ul id='nav'>
-		<li class='liss'><a class='linn' href="/">Home</a></li>
-		<li class='liss'><a class='linn' href="/">Quotes</a></li>
-		<li class='liss'><a class='linn' href="/">Login</a></li>
-		<li class='liss'><a class='linn' href="/">Sign Up</a></li>
+		<li class='liss'><a class='linn' href="/index">Home</a></li>
+		<li class='liss'><a class='linn' href="/quotes">Quotes</a></li>
+		<li class='liss'><a class='linn' href="/playlist">Your Playlist</a></li>
+		<li class='liss'><a class='linn' href="/login">Sign In</a></li>
 
 	</ul>
 
 	<!-- Wrapper -->
-	<div id="wrapper" >
+	<div id="wrapper">
 
 		<!-- Main -->
 		<section id="main">
 			<header>
-	<h1><strong>SoundShelter</strong></h1>
-									
-			<hr />
+				<h1><strong>SoundShelter</strong></h1>
+
+				<hr />
 				<p>Your one and only music safe haven!</p>
 				<ul class="icons">
 					<li><img src="static/images/logo.jpg" width="50" height="50"></li>
 				</ul>
 			</header>
 
-				<p></p>
-				<h1><center>Hello {{nickname}}!</center></h1>
-        <h2>We recommend the song: </h2>
-        <iframe src="{{recommendation}}"  width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+			<p></p>
+			<h1>
+				<center>Hello {{nickname}}!</center>
+			</h1>
+			<h2>We recommend the song: </h2>
+			<iframe src="{{recommendation}}" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+			<form method="get" action="/playlist">
+				<button type="submit" action="/playlist">ADD</button>
+			</form>
 			<hr />
 			<h2>Feedback:</h2>
 			<form method="post" action="#">
@@ -106,13 +111,13 @@
 						<textarea name="message" id="message" placeholder="Message" rows="4"></textarea>
 					</div>
 					<div class="field">
-					<!--	<input type="checkbox" id="human" name="human" /><label for="human">I'm a human</label>-->
+						<!--	<input type="checkbox" id="human" name="human" /><label for="human">I'm a human</label>-->
 
-				<ul class="actions special">
-					<li><a href="#" class="button">Send to HR</a></li>
-				</ul>
+						<ul class="actions special">
+							<li><a href="#" class="button">Send to HR</a></li>
+						</ul>
 			</form>
-			<hr /> 
+			<hr />
 			<footer>
 				<ul class="icons">
 					<li><a href="https://www.linkedin.com/in/grace-cen-8b2493186/" class="icon brands fa-linkedin">LinkedIn</a></li>
@@ -130,15 +135,15 @@
 			</ul>
 		</footer>
 
-	</div>
+		</div>
 
-	<!-- Scripts -->
-	<script>
-		if ('addEventListener' in window) {
-			window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-preload\b/, ''); });
-			document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
-		}
-	</script>
+		<!-- Scripts -->
+		<script>
+			if ('addEventListener' in window) {
+				window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-preload\b/, ''); });
+				document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+			}
+		</script>
 
 </body>
 

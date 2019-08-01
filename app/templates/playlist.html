@@ -8,24 +8,8 @@
 
 
 <head>
-
-	<!-- Compiled and minified CSS -->
-
-	<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">-->
-	<!-- Compiled and minified JavaScript -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-
-	<link rel="shortcut icon" href="static/images/logo.jpg" type="image/x-icon"/>
-	<title>SoundShelter</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="static/assets/css/main.css" />
-	<noscript><link rel="stylesheet" href="static/assets/css/noscript.css" /></noscript>
-
-
 </head>
-
+	<link rel="shortcut icon" href="static/images/logo.jpg" type="image/x-icon"/>
 <body class="is-preload">
 	<style>
 		#nav {
@@ -65,12 +49,30 @@
 		}
 	</style>
 	<ul id='nav'>
-		<li class='liss'><a class='linn' href="/index">Home</a></li>
-		<li class='liss'><a class='linn' href="/quotes">Quotes</a></li>
-		<li class='liss'><a class='linn' href="/playlist">Your Playlist</a></li>
-		<li class='liss'><a class='linn' href="/login">Sign In</a></li>
+		<li class='liss'><a class='linn' href="/">Home</a></li>
+		<li class='liss'><a class='linn' href="/">Quotes</a></li>
+		<li class='liss'><a class='linn' href="/">Your Playlist</a></li>
+		<li class='liss'><a class='linn' href="/add">Sign In</a></li>
 
 	</ul>
+	<!-- Compiled and minified CSS -->
+
+	<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">-->
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+
+	<title>SoundShelter</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="static/assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="static/assets/css/noscript.css" /></noscript>
+
+
+
+
+
 	<!-- Wrapper -->
 	<div id="wrapper">
 
@@ -87,33 +89,13 @@
 					<li><img src="static/images/logo.jpg" width="50" height="50"></li>
 				</ul>
 			</header>
-			<form method="post" action="/mood">
-			
-				<label for="nickname">Name: </label>
-				<input type='text' name='nickname'>
-
-				<p></p>
-				<p>Please select your mood:</p>
-				<input type="radio" name="mood" value="happy" requiredrequire> Happy<br>
-				<input type="radio" name="mood" value="sad"> Sad<br>
-				<input type="radio" name="mood" value="mad"> Mad<br>
-				 <input type="radio" name="mood" value="stressed"> Stressed<br>
-				<input type="radio" name="mood" value="in love"> In Love<br>
-				<p></p>
-
-				<p>Please select your genre:</p>
-				<input type="radio" name="genre" value="pop" required> Pop<br>
-				<input type="radio" name="genre" value="rnb"> RnB<br>
-				<input type="radio" name="genre" value="rock"> Rock<br>
-				<input type="radio" name="genre" value="rap"> Rap<br>
-				<input type="radio" name="genre" value="country"> Country<br>
-
-  
-				<p></p>
-
-				<input type="submit" value="Submit">
-
-			</form>
+			<div class = "songs-list">
+            <ul>
+                {% for songs in pl %}
+                <li>{{ songs.songs }}  {{songs.title}} by {{ songs.artist }} <a href = "/remove">(x)</a></li>
+                {% endfor %}
+            </ul>
+            </div>
 
 			<hr />
 			<footer>

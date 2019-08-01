@@ -78,20 +78,20 @@ def moodCalculator(mood, genre):
     
 
     if mood == 'in love' and genre == 'pop':
-        recommendation = ['https://open.spotify.com/embed/track/6LsAAHotRLMOHfCsSfYCsz','https://open.spotify.com/embed/track/3HVWdVOQ0ZA45FuZGSfvns', 'https://open.spotify.com/embed/track/7kSLdGdXLey7pzLsWpdg1h', 'https://open.spotify.com/embed/track/2RttW7RAu5nOAfq6YFvApB', 'https://open.spotify.com/embed/track/7COXchtUOMd6uIT6HvmRaI']
+        recommendation = ['https://open.spotify.com/track/6LsAAHotRLMOHfCsSfYCsz?si=1oGHGArgQJ-touibUq3_rw','https://open.spotify.com/track/3HVWdVOQ0ZA45FuZGSfvns?si=QJ1B4XQnREqGJEdJYVWG3A', 'https://open.spotify.com/track/7kSLdGdXLey7pzLsWpdg1h?si=slm7tPcSTbG3FfUCH7vmWg', 'https://open.spotify.com/track/2RttW7RAu5nOAfq6YFvApB?si=k8zo8jgWSTWEmOhmqiH2EA', 'https://open.spotify.com/track/7COXchtUOMd6uIT6HvmRaI?si=2kAoL6X1QT2saZiYRFH9ZQ']
         return(random.choice(recommendation))      
     elif mood == 'in love' and genre == 'rnb':
-        recommendation = ['https://open.spotify.com/embed/track/3LmvfNUQtglbTrydsdIqFU', 'https://open.spotify.com/embed/track/0JEqGkvUiMTQmFY6sgL9kg', 'https://open.spotify.com/embed/track/3ibKnFDaa3GhpPGlOUj7ff', 'https://open.spotify.com/embed/track/7Lf7oSEVdzZqTA0kEDSlS5', 'https://open.spotify.com/embed/track/0PG9fbaaHFHfre2gUVo7AN']
+        recommendation = ['https://open.spotify.com/track/3LmvfNUQtglbTrydsdIqFU?si=-QkIhImZRtGqmyXllzHBtg', 'https://open.spotify.com/track/0JEqGkvUiMTQmFY6sgL9kg?si=yIkPIDrER--zw3806Pg1Vg', 'https://open.spotify.com/track/3ibKnFDaa3GhpPGlOUj7ff?si=xhj-WPo8TEO2MzQW7XRtLw', 'https://open.spotify.com/track/7Lf7oSEVdzZqTA0kEDSlS5?si=Eee9P7qrTbi7y-kLslkl9g', 'https://open.spotify.com/track/0PG9fbaaHFHfre2gUVo7AN?si=0wpSZcwMS8-4PQRcPU7blQ']
         return(random.choice(recommendation))  
     elif mood == 'in love' and genre == 'rap':
-        recommendation = ['https://open.spotify.com/embed/track/6PGoSes0D9eUDeeAafB2As', 'https://open.spotify.com/embed/track/2lpygKqzPFtItQ4ss3cgfb', 'https://open.spotify.com/embed/track/46CA1H0T1r7u5lDUtVveAh', 'https://open.spotify.com/embed/track/43PuMrRfbyyuz4QpZ3oAwN', 'https://open.spotify.com/embed/track/5mCPDVBb16L4XQwDdbRUpz']
-        return(random.choice(recommendation))    
+        recommendation = ''
+        return(recommendation)    
     elif mood == 'in love' and genre == 'country':
-        recommendation = ['https://open.spotify.com/embed/track/5F5lmpwXkxAJtvZqEguTRo','https://open.spotify.com/embed/track/2SpEHTbUuebeLkgs9QB7Ue','https://open.spotify.com/embed/track/3GCL1PydwsLodcpv0Ll1ch', 'https://open.spotify.com/embed/track/0b9djfiuDIMw1zKH6gV74g','https://open.spotify.com/embed/track/2rxQMGVafnNaRaXlRMWPde']
-        return(random.choice(recommendation))
+        recommendation = ''
+        return(recommendation)
     elif mood == 'in love' and genre == 'rock':
-        recommendation = ['https://open.spotify.com/embed/track/5lDriBxJd22IhOH9zTcFrV', 'https://open.spotify.com/embed/track/7oK9VyNzrYvRFo7nQEYkWN', 'https://open.spotify.com/embed/track/5OQsiBsky2k2kDKy2bX2eT', 'https://open.spotify.com/embed/track/4UzVcXufOhGUwF56HT7b8M','https://open.spotify.com/embed/track/4JXfNOePhdgMOI7KZ1L25U']
-        return(random.choice(recommendation))
+        recommendation = ''
+        return(recommendation)
     # elif mood == 'in love' and genre == 'Classical':
     #     recommendation = ''
     #     return(recommendation)
