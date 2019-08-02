@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE HTML>
 <!--
 	Identity by HTML5 UP
@@ -9,16 +7,16 @@
 <html>
 
 <head>
-	<link rel="shortcut icon" href="static/images/logo.jpg" type="image/x-icon"/>
+	<link rel="shortcut icon" href="static/images/logo.jpg" type="image/x-icon" />
 	<title>SoundShelter</title>
-	
+
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="static/assets/css/main.css" />
 	<noscript><link rel="stylesheet" href="static/assets/css/noscript.css" /></noscript>
-	
+
 	<link rel="stylesheet" href="static/assets/css/thelaststraw.css" />
-	
+
 </head>
 
 <body class="is-preload">
@@ -64,62 +62,49 @@
 		<li class='liss'><a class='linn' href="/quotes">Quotes</a></li>
 		<li class='liss'><a class='linn' href="/aboutus">About Us </a></li>
 		<!--<li class='liss'><a class='linn' href="/playlist">Your Playlist</a></li>-->
-		<li class='liss'><a class='linn' href="/login">Sign In</a></li>
-		<li class='liss'><a class='linn' href="/logout">Log Out</a></li>
+		<!--<li class='liss'><a class='linn' href="/login">Sign In</a></li>-->
 
 	</ul>
 
 	<!-- Wrapper -->
-	<div id="wrapper" >
+	<div id="wrapper">
 
 		<!-- Main -->
 		<section id="main">
 			<header>
-	<h1><strong>SoundShelter</strong></h1>
-									
-			<hr />
+				<h1><strong>SoundShelter</strong></h1>
+
+				<hr />
 				<p>Your one and only music safe haven!</p>
 				<ul class="icons">
 					<li><img src="static/images/logo.jpg" width="50" height="50"></li>
 				</ul>
 			</header>
 
-				<p></p>
-				<h1><center>Hello {{nickname}}!</center></h1>
-        <p>Your quote is: </p>
-        <h2>"{{quote}}"</h2>
-     		<p></p>
-        
-			<hr />
-			<h2>Feedback:</h2>
-			<form method="post" action="#">
-				<div class="fields">
-					<div class="field">
-						<input type="text" name="name" id="name" placeholder="Name" />
-					</div>
-					<div class="field">
-						<input type="email" name="email" id="email" placeholder="Email" />
-					</div>
-					<div class="field">
-						<!--<select name="department" id="department">-->
-						<!--				<option value="">Department</option>-->
-						<!--				<option value="sales">Sales</option>-->
-						<!--				<option value="tech">Tech Support</option>-->
-						<!--				<option value="null">/dev/null</option>-->
-						<!--			</select>-->
-					</div>
-					<div class="field">
-						<textarea name="message" id="message" placeholder="Message" rows="4"></textarea>
-					</div>
-					<div class="field">
-					<!--	<input type="checkbox" id="human" name="human" /><label for="human">I'm a human</label>-->
-
-				<ul class="actions special">
-					
-					<li><a href="#" class="button">Send to HR</a></li>
-				</ul>
+			<p></p>
+			<h1>
+			<p></p>	
+				<center></center>
+			</h1>
+			<h2></h2>
+			
+			<h1><b>Thank you for your feedback!<b></h1>
+			
 			</form>
-			<hr /> 
+
+		
+			
+			<!--<a href="{{ url_for('test1') }}">REFRESH</a>-->
+			<!--<form method="get" action="/mood">-->
+			<!--	<button type="submit" action="/mood">NEW SONG</button>-->
+
+				<script>
+function refreshPage(){
+    window.location.reload();
+} 
+</script>
+			
+			<hr />
 			<footer>
 				<ul class="icons">
 					<li><a href="https://www.linkedin.com/in/grace-cen-8b2493186/" class="icon brands fa-linkedin">LinkedIn</a></li>
@@ -137,15 +122,15 @@
 			</ul>
 		</footer>
 
-	</div>
+		</div>
 
-	<!-- Scripts -->
-	<script>
-		if ('addEventListener' in window) {
-			window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-preload\b/, ''); });
-			document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
-		}
-	</script>
+		<!-- Scripts -->
+		<script>
+			if ('addEventListener' in window) {
+				window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-preload\b/, ''); });
+				document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+			}
+		</script>
 
 </body>
 

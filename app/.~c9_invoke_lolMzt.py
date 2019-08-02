@@ -147,10 +147,3 @@ def quotesfeedback():
     else:
         name = userdata['name']
         return render_template("feedback2.html", name=name)
-
-@app.route("/aboutus", methods=['GET'])
-def aboutus():
-    userdata = dict(request.form)
-    print (userdata)
-    if request.method == "GET":
-        return render_template("aboutus.html")

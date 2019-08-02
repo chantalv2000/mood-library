@@ -49,9 +49,10 @@
 		}
 	</style>
 	<ul id='nav'>
-		<li class='liss'><a class='linn' href="/">Home</a></li>
-		<li class='liss'><a class='linn' href="/">Quotes</a></li>
-		<li class='liss'><a class='linn' href="/">Your Playlist</a></li>
+		<li class='liss'><a class='linn' href="/index">Home</a></li>
+		<li class='liss'><a class='linn' href="/quotes">Quotes</a></li>
+		<li class='liss'><a class='linn' href="/aboutus">About Us </a></li>
+		<!--<li class='liss'><a class='linn' href="/">Your Playlist</a></li>-->
 		<li class='liss'><a class='linn' href="/login">Sign In</a></li>
 
 	</ul>
@@ -88,6 +89,7 @@
 				<ul class="icons">
 					<li><img src="static/images/logo.jpg" width="50" height="50"></li>
 				</ul>
+			
 			</header>
 			<form method="post" action="/quotes">
 			
@@ -96,9 +98,11 @@
 
 				<p></p>
 				<p>Please select your mood:</p>
-				<input type="radio" name="mood" value="happy"> Happy<br>
+				<input type="radio" name="mood" value="happy" required> Happy<br>
 				<input type="radio" name="mood" value="sad"> Sad<br>
 				<input type="radio" name="mood" value="mad"> Mad<br>
+				<input type="radio" name="mood" value="stressed"> Stressed<br>
+				<input type="radio" name="mood" value="in love"> In Love<br>
 				<!--  <input type="radio" name="mood" value="stressed"> Stressed<br>-->
 				<!--<input type="radio" name="mood" value="in love"> In Love<br>-->
 				<p></p>
@@ -112,7 +116,7 @@
 				<ul class="icons">
 					<li><a href="https://www.linkedin.com/in/grace-cen-8b2493186/" class="icon brands fa-linkedin">Linkedin</a></li>
 					<li><a href="https://www.linkedin.com/in/chantal-villacres-4a2ba1180/" class="icon brands fa-linkedin">LinkedIn</a></li>
-					<li><a href="#" class="icon brands fa-linkedin">LinkedIn</a></li>
+					<li><a href="https://www.linkedin.com/in/umar-f-8b23ab13b/" class="icon brands fa-linkedin">LinkedIn</a></li>
 				</ul>
 			</footer>
 		</section>

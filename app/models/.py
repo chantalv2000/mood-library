@@ -3,7 +3,6 @@ def moodCalculator(mood, genre):
     if mood == 'happy' and genre == 'pop':
         recommendation = ["https://open.spotify.com/embed/track/5Hroj5K7vLpIG4FNCRIjbP",'https://open.spotify.com/embed/track/3QmolSZqjjLksTUvZJ6pPS','https://open.spotify.com/embed/track/5b88tNINg4Q4nrRbrCXUmg','https://open.spotify.com/embed/track/2dpaYNEQHiRxtZbfNsse99']
         return (random.choice(recommendation))
-        
     elif mood == 'happy' and genre == 'r&b':
         recommendation = ["https://open.spotify.com/embed/track/5m77d1ztVTdZN9FevK9TE1",'https://open.spotify.com/embed/track/52FpkyImUt9LDI9mCWDryr','https://open.spotify.com/embed/track/3RU8VkqNLhv2mtwrVmnmrF','https://open.spotify.com/embed/track/6m59VvDUi0UQsB2eZ9wVbH','https://open.spotify.com/embed/track/6afg6nOJq4YLdLBY3RcUr6']
         return (random.choice(recommendation)) 

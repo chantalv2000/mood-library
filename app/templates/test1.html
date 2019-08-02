@@ -60,8 +60,10 @@
 	<ul id='nav'>
 		<li class='liss'><a class='linn' href="/index">Home</a></li>
 		<li class='liss'><a class='linn' href="/quotes">Quotes</a></li>
-		<li class='liss'><a class='linn' href="/playlist">Your Playlist</a></li>
+		<li class='liss'><a class='linn' href="/aboutus">About Us </a></li>
+		<!--<li class='liss'><a class='linn' href="/playlist">Your Playlist</a></li>-->
 		<li class='liss'><a class='linn' href="/login">Sign In</a></li>
+		<!--<li class='liss'><a class='linn' href="/logout">Log Out</a></li>-->
 
 	</ul>
 
@@ -83,11 +85,32 @@
 			<p></p>
 			<h1>
 				<center>Hello {{nickname}}!</center>
+				<p></p>
 			</h1>
-			<h2>We recommend the song: </h2>
+			<h2></h2>
+			<h3>Your mood is: {{moodd}}</h3>
+			<h4>You chose genre: {{genre}}</h4>
+				<p></p>
+			<h2>
+				<p></p>
+			<h3>recommendation:</h3>
+				<p></p>
+			
+		
+			
+		
 			<iframe src="{{recommendation}}" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-			<form method="get" action="/playlist">
-				<button type="submit" action="/playlist">ADD</button>
+			<!--<button onclick=location=URL>Refresh</button>-->
+			<p> </p>
+			</h1>
+			<h2></h2>
+			<p>Refresh for a new song!</p>
+			<!--<a href="{{ url_for('test1') }}">REFRESH</a>-->
+			<!--<form method="get" action="/mood">-->
+			<!--	<button type="submit" action="/mood">NEW SONG</button>-->
+			<!--<form method="post" action='/add/{{recommendation}}'>-->
+				<!--<button type="submit" >ADD</button>-->
+				
 			</form>
 			<hr />
 			<h2>Feedback:</h2>
@@ -100,21 +123,15 @@
 						<input type="email" name="email" id="email" placeholder="Email" />
 					</div>
 					<div class="field">
-						<!--<select name="department" id="department">-->
-						<!--				<option value="">Department</option>-->
-						<!--				<option value="sales">Sales</option>-->
-						<!--				<option value="tech">Tech Support</option>-->
-						<!--				<option value="null">/dev/null</option>-->
-						<!--			</select>-->
 					</div>
 					<div class="field">
-						<textarea name="message" id="message" placeholder="Message" rows="4"></textarea>
+						<textarea name="message" id="message" placeholder="Message" rows="6"></textarea>
 					</div>
 					<div class="field">
-						<!--	<input type="checkbox" id="human" name="human" /><label for="human">I'm a human</label>-->
 
 						<ul class="actions special">
-							<li><a href="#" class="button">Send to HR</a></li>
+							
+							<li><a href="/feedback" class="button">Send to HR</a></li>
 						</ul>
 			</form>
 			<hr />
@@ -122,7 +139,7 @@
 				<ul class="icons">
 					<li><a href="https://www.linkedin.com/in/grace-cen-8b2493186/" class="icon brands fa-linkedin">LinkedIn</a></li>
 					<li><a href="https://www.linkedin.com/in/chantal-villacres-4a2ba1180/" class="icon brands fa-linkedin">LinkedIn</a></li>
-					<li><a href="#" class="icon brands fa-linkedin">LinkedIn</a></li>
+					<li><a href="https://www.linkedin.com/in/umar-f-8b23ab13b/" class="icon brands fa-linkedin">LinkedIn</a></li>
 				</ul>
 			</footer>
 		</section>

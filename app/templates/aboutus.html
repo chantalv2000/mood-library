@@ -51,9 +51,8 @@
 	<ul id='nav'>
 		<li class='liss'><a class='linn' href="/index">Home</a></li>
 		<li class='liss'><a class='linn' href="/quotes">Quotes</a></li>
-		<li class='liss'><a class='linn' href="/login">About Us </a></li>
-		<li class='liss'><a class='linn' href="/">Your Playlist</a></li>
-		<li class='liss'><a class='linn' href="/add">Sign In</a></li>
+		<li class='liss'><a class='linn' href="/aboutus">About us</a></li>
+		<li class='liss'><a class='linn' href="/login">Sign In</a></li>
 
 	</ul>
 	<!-- Compiled and minified CSS -->
@@ -90,13 +89,43 @@
 					<li><img src="static/images/logo.jpg" width="50" height="50"></li>
 				</ul>
 			</header>
-			<div class = "songs-list">
-            <ul>
-                {% for songs in pl %}
-                <li>{{ songs.songs }}  {{songs.title}} by {{ songs.artist }} <a href = "/remove">(x)</a></li>
-                {% endfor %}
-            </ul>
-            </div>
+			<form method="post" action="/quotes">
+			
+				<!--<label for="nickname">Name: </label>-->
+				<!--<input type='text' name='nickname'>-->
+				<p></p>
+				
+				<h1>About us:</h1>
+					<p></p>
+				<hr />
+				<h2>Grace Cen</h2>
+				<ul>
+					<li><p align="left">Age: 17</p></li>
+					<li><p align="left">College: Harvard University</p></li>
+					<li><p align="left">Favorite Song: Speechless from Aladdin</p></li>
+					<li><p align="left">I HAVE NOT HAD ANY PRIOR CODING EXPERIENCE WITH PYTHON OR HTML SO THIS WAS A COMPLETELY NEW EXPERIENCE FOR ME. THE CREATIVE ASPECT OF THIS PROJECT WAS MY FAVORITE; I GOT TO CREATE THE CONCEPT OF THE APP AND WORK THROUGH IT FROM BEGINNING TO END!</p></li>
+					<!--<li>Going into this project, I really questioned whether or not we could create a functional, well designed application. I have not had any prior coding experience with python or HTML so this was a completely new experience for me but wonderful because I learned so much in such a short interval of time. The creative aspect of this project was my favorite; I got to create the concept of the app and work through it from beginning to end!</li>-->
+				</ul>
+					<p></p>
+					<hr />
+				
+				<h2>chantal Villacres</h2>
+				<ul>
+					<li><p align="left">Age: 18</p></li>
+					<li><p align="left">College: Baruch College</p></li>
+					<li><p align="left">Favorite Song: Dancing Queen by ABBA</p></li>
+					<li><p align="left">A big thanks to upperline code! Without them I wouldn't have been able to develop any part of this application. The best part was debugging, catching our errors taught me a lot about code!</p></li>
+				</ul>
+					<p></p>
+				<hr />
+				<h2>Umar F.</h2>
+				<ul>
+					<li><p align="left">Age: 17</p></li>
+					<li><p align="left">College: City Tech</p></li>
+					<li><p align="left">Favorite Song: Ransom by a boogie</p></li>
+				</ul>
+
+			</form>
 
 			<hr />
 			<footer>
@@ -111,7 +140,7 @@
 		<!-- Footer -->
 		<footer id="footer">
 			<ul class="copyright">
-				<li>&copy;SoundShelter</li>
+				<li>&copy; SoundShelter</li>
 				<li>Design: <a href="">Grace, Chantal, Umar</a></li>
 			</ul>
 		</footer>
